@@ -40,7 +40,8 @@ public class Map {
 
         // czy gracz ma wystarczajaco staminy, zeby przeniesc sie do lokalizacji
         //potwierdzenie przez gracza
-
+        setPlayerLocation(player,p);
+        //ITP
         //warunki itp
         //if(entities.containsKey(p))
         //pickUpEntity();

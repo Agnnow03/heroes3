@@ -17,7 +17,7 @@ public class MapTest {
         Map map = new Map(List.of(a1),List.of(a1Location));
         Hero player = new Hero(emptyList());
         map.addPlayer(player);
-        map.setPlayerLocation(player,new Point(2,2));
+        
         // zainicjalizowanie mapy, ustawienie lokalizacji bohatera 2,2, artefaktu na 2,2
 
         map.interact(player,new Point(2,2)); // tutaj ruch gracza
