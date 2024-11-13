@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static java.util.Collections.emptyList;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MapTest {
 
@@ -23,7 +25,8 @@ public class MapTest {
                             //a na nim jest artefakt
                             //przez co podniesie artefakt
 
-        assertThat(player.get.isEqualTo(a1));
+        assertTrue(player.getArtefacts().containsValue(a1));
+        assertFalse(map.getEntities().containsValue(a1));
     }
 
 }
