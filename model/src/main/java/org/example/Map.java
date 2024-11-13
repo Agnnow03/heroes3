@@ -15,18 +15,21 @@ public class Map {
     public final static int HEIGHT = 20;
 
     public final static Point SPAWN_LOCATION = new Point(0,0);
-    BiMap<Point, Entity> entities = HashBiMap.create();
-    BiMap<Point, Hero> players = HashBiMap.create();
+
+    BiMap<Entity, Point> entities = HashBiMap.create();
+    BiMap<Hero, Point> players = HashBiMap.create();
 
     public Map(List<Entity> e, List<Point> location){
-
+        for (int i = 0; i < e.size(); i++) {
+            entities.put(e.get(i),location.get(i));
+        }
     }
 
-    public void addPlayer(Hero p){
-        players.put(SPAWN_LOCATION,p);
+    public void addPlayer(Hero player){
+        players.put(player,SPAWN_LOCATION);
     }
     public void setPlayerLocation(Hero player,Point p){
-        players.put(p,player);
+        players.put(player,p);
     }
 
     public void interact(Hero player,Point p) {

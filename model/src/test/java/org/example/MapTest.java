@@ -25,8 +25,8 @@ public class MapTest {
                             //a na nim jest artefakt
                             //przez co podniesie artefakt
 
-        assertTrue(player.getArtefacts().containsValue(a1));
-        assertFalse(map.getEntities().containsValue(a1));
+        assertTrue(player.getArtefacts().containsKey(a1));
+        assertFalse(map.getEntities().containsKey(a1));
     }
 
 }

@@ -9,7 +9,7 @@ import java.util.List;
 @Value
 public class Hero {
     private final List<Creature> creatures;
-    BiMap<Integer, Artefact> artefacts = HashBiMap.create();
+    BiMap<Artefact,Integer> artefacts = HashBiMap.create();
     //mapa do artefaktow na podstaci,
     //do artefaktow w sakwie - lista?
 
